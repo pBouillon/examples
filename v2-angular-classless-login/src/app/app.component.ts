@@ -15,8 +15,7 @@ import { Component, ElementRef, HostListener, Renderer2, inject, viewChild } fro
           aria-label="Login"
           autocomplete="username"
           required
-          ngModel
-        >
+        />
 
         <input
           type="password"
@@ -25,8 +24,7 @@ import { Component, ElementRef, HostListener, Renderer2, inject, viewChild } fro
           aria-label="Password"
           autocomplete="current-password"
           required
-          ngModel
-        >
+        />
 
         <fieldset>
           <label for="remember">
@@ -42,11 +40,11 @@ import { Component, ElementRef, HostListener, Renderer2, inject, viewChild } fro
 })
 export class AppComponent {
   readonly #renderer = inject(Renderer2);
-  readonly #mainRef = viewChild.required<ElementRef<HTMLElement>>("mainRef");
+  protected readonly mainRef = viewChild.required<ElementRef<HTMLElement>>("mainRef");
 
   @HostListener("window:resize")
   onResize(): void {
-    const mainRef = this.#mainRef();
+    const mainRef = this.mainRef();
     if (!mainRef) return;
     this.#renderer.setStyle(mainRef, "min-height", `${window.innerHeight}px`);
   }
