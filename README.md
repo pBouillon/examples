@@ -16,19 +16,25 @@ Minimalist templates to discover Pico in action:
   <summary><strong>Pico v2 examples</strong></summary>
 
 - **[Preview](https://codesandbox.io/s/github/picocss/examples/tree/master/v2-html)**  
-A pure HTML example, without dependencies.
+  A pure HTML example, without dependencies.
 
 - **[Class-less preview](https://codesandbox.io/s/github/picocss/examples/tree/master/v2-html-classless)**  
-A class-less example, without dependencies.
+  A class-less example, without dependencies.
 
 - **[Customized design system](https://codesandbox.io/s/github/picocss/examples/tree/master/v2-sass-customized-design-system)**  
-An example to customize Pico CSS with SASS.
+  An example to customize Pico CSS with SASS.
+
+- **[Angular class-less login](https://codesandbox.io/s/github/picocss/examples/tree/master/v2-angular-classless-login)**  
+  A minimal, class-less login page in React, with a custom primary color.
+
+- **[Angular color schemes and modal](https://codesandbox.io/s/github/picocss/examples/tree/master/v2-angular-color-schemes-and-modal)**  
+  Switch color schemes and open modals with Angular.
 
 - **[React class-less login](https://codesandbox.io/s/github/picocss/examples/tree/master/v2-react-classless-login)**  
-A minimal, class-less login page in React, with a custom primary color.
+  A minimal, class-less login page in React, with a custom primary color.
 
 - **[React color schemes and modal](https://codesandbox.io/s/github/picocss/examples/tree/master/v2-react-color-schemes-and-modal)**  
-Switch color schemes and open modals with React.
+  Switch color schemes and open modals with React.
 
 - **[Conditional Styling](https://codesandbox.io/s/github/picocss/examples/tree/master/v2-conditional-styling)**  
 A minimal example with the conditional version.
