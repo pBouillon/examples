@@ -4,10 +4,9 @@ import { IconMoonComponent, IconSunComponent } from "../icons";
 import { ThemeService } from "./theme.service";
 
 @Component({
-  selector: "app-color-scheme-switcher",
-  standalone: true,
-  imports: [IconMoonComponent, IconSunComponent],
-  template: `
+    selector: "app-color-scheme-switcher",
+    imports: [IconMoonComponent, IconSunComponent],
+    template: `
     @if(vm(); as vm){
     <a [href]="'#' + vm.nextTheme" [ariaLabel]="vm.nextThemeLabel" (click)="switchTheme()">
       @switch (vm.currentColorScheme) { @case ('light') {
@@ -17,7 +16,7 @@ import { ThemeService } from "./theme.service";
       } }
     </a>
     }
-  `,
+  `
 })
 export class ColorSchemeSwitcherComponent {
   readonly #themeService = inject(ThemeService);

@@ -4,10 +4,9 @@ import { ModalComponent } from "./shared/modal";
 import { ColorSchemeSwitcherComponent } from "./shared/theme";
 
 @Component({
-  selector: "app-root",
-  standalone: true,
-  imports: [ColorSchemeSwitcherComponent, ModalComponent],
-  template: `
+    selector: "app-root",
+    imports: [ColorSchemeSwitcherComponent, ModalComponent],
+    template: `
     <header class="container">
       <app-color-scheme-switcher />
     </header>
@@ -31,7 +30,7 @@ import { ColorSchemeSwitcherComponent } from "./shared/theme";
         </a>
       </small>
     </footer>
-  `,
+  `
 })
 export class AppComponent {
   readonly isModalOpen = signal(false);
