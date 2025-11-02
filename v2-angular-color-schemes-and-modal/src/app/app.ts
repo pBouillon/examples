@@ -1,12 +1,12 @@
-import { Component, signal } from "@angular/core";
+import { ChangeDetectionStrategy, Component, signal } from "@angular/core";
 
-import { ModalComponent } from "./shared/modal";
-import { ColorSchemeSwitcherComponent } from "./shared/theme";
+import { Modal } from "./modal";
+import { ColorSchemeSwitcher } from "./theme";
 
 @Component({
-    selector: "app-root",
-    imports: [ColorSchemeSwitcherComponent, ModalComponent],
-    template: `
+  selector: "app-root",
+  imports: [ColorSchemeSwitcher, Modal],
+  template: `
     <header class="container">
       <app-color-scheme-switcher />
     </header>
@@ -30,9 +30,10 @@ import { ColorSchemeSwitcherComponent } from "./shared/theme";
         </a>
       </small>
     </footer>
-  `
+  `,
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AppComponent {
+export class App {
   readonly isModalOpen = signal(false);
 
   openModal(): void {

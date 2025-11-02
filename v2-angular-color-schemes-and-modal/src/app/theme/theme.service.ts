@@ -11,10 +11,10 @@ const defaultTheme: ColorScheme = window?.matchMedia("(prefers-color-scheme: dar
 
 @Injectable({ providedIn: "root" })
 export class ThemeService {
-  currentColorScheme = signal<ColorScheme>(defaultTheme);
+  readonly currentColorScheme = signal<ColorScheme>(defaultTheme);
 
-  nextColorScheme = computed<ColorScheme>(() =>
-    this.currentColorScheme() === "light" ? "dark" : "light"
+  readonly nextColorScheme = computed<ColorScheme>(() =>
+    this.currentColorScheme() === "light" ? "dark" : "light",
   );
 
   constructor() {

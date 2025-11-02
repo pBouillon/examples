@@ -7,10 +7,10 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
+          "changeDetection": "OnPush",
           "inlineTemplate": true,
           "inlineStyle": true,
-          "style": "scss",
-          "skipTests": true
+          "style": "scss"
         },
         "@schematics/angular:class": {
           "skipTests": true

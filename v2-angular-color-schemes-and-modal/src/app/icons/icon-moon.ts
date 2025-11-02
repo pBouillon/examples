@@ -1,9 +1,8 @@
-import { Component } from "@angular/core";
+import { ChangeDetectionStrategy, Component } from "@angular/core";
 
 // Source Tabler Icons: https://tablericons.com/
 @Component({
   selector: "app-icon-moon",
-  standalone: true,
   template: `
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -24,5 +23,6 @@ import { Component } from "@angular/core";
       />
     </svg>
   `,
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class IconMoonComponent {}
+export class IconMoon {}
