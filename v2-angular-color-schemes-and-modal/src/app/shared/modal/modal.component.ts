@@ -1,4 +1,4 @@
-import { DOCUMENT } from "@angular/common";
+
 import {
   Component,
   EventEmitter,
@@ -10,6 +10,7 @@ import {
   inject,
   input,
   signal,
+  DOCUMENT
 } from "@angular/core";
 import { takeUntilDestroyed, toObservable } from "@angular/core/rxjs-interop";
 
