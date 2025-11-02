@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, Renderer2, inject, viewChild } from "@angular/core";
+import { ChangeDetectionStrategy, Component, ElementRef, viewChild } from "@angular/core";
 
 @Component({
   selector: "app-root",
@@ -36,15 +36,18 @@ import { Component, ElementRef, HostListener, Renderer2, inject, viewChild } fro
       </form>
     </main>
   `,
+  host: {
+    "(window:resize)": "onResize()",
+  },
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AppComponent {
-  readonly #renderer = inject(Renderer2);
+export class App {
   protected readonly mainRef = viewChild.required<ElementRef<HTMLElement>>("mainRef");
 
-  @HostListener("window:resize")
   onResize(): void {
     const mainRef = this.mainRef();
-    if (!mainRef) return;
-    this.#renderer.setStyle(mainRef, "min-height", `${window.innerHeight}px`);
+    if (mainRef) {
+      mainRef.nativeElement.style.minHeight = `${window.innerHeight}px`;
+    }
   }
 }
