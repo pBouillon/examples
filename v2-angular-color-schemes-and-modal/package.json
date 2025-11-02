@@ -22,7 +22,7 @@
     "@angular/build": "^20.3.8",
     "@angular/cli": "^20.3.8",
     "@angular/compiler-cli": "^20.3.9",
-    "@picocss/pico": "^2.0.3",
+    "@picocss/pico": "^2.1.1",
     "typescript": "~5.9.3"
   }
 }
