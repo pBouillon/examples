@@ -2,7 +2,6 @@ import { Component, ElementRef, HostListener, Renderer2, inject, viewChild } fro
 
 @Component({
   selector: "app-root",
-  standalone: true,
   template: `
     <main #mainRef>
       <h1>Sign in</h1>
